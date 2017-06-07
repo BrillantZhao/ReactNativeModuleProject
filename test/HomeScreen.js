@@ -15,6 +15,7 @@ import {
 import {StackNavigator} from 'react-navigation';
 import LoginScreen from './login/LoginScreen'
 import FlexBoxScreen from './flexbox/FlexBoxScreen'
+import ImageScreen from './image/ImageScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -106,6 +107,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('ImageScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>常用组件Image使用</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -147,6 +157,7 @@ const SimpleApp = StackNavigator({
     TestScreen: {screen: TestScreen},
     LoginScreen: {screen: LoginScreen},
     FlexBoxScreen: {screen: FlexBoxScreen},
+    ImageScreen: {screen: ImageScreen},
 });
 
 export default SimpleApp;
