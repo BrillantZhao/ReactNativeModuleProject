@@ -18,6 +18,7 @@ import FlexBoxScreen from './FlexBoxScreen'
 import ImageScreen from './ImageScreen'
 import TextInputScreen from './TextInputScreen'
 import TouchableScreen from './TouchableScreen'
+import LifeCycleScreen from './LifeCycleScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -136,6 +137,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('LifeCycleScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>生命周期</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -180,6 +190,7 @@ const SimpleApp = StackNavigator({
     ImageScreen: {screen: ImageScreen},
     TextInputScreen: {screen: TextInputScreen},
     TouchableScreen: {screen: TouchableScreen},
+    LifeCycleScreen: {screen: LifeCycleScreen},
 });
 
 export default SimpleApp;
