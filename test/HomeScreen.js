@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import LoginScreen from './login/LoginScreen'
+import FlexBoxScreen from './flexbox/FlexBoxScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -27,7 +28,7 @@ class HomeScreen extends React.Component {
         title: 'Welcome,HomeScreen',//设置标题内容
     };
 
-    render() {
+    render() {  // render相当于初始化入口
         const {navigate} = this.props.navigation;
         return (
             <View style={styles.container}>
@@ -98,12 +99,10 @@ class TestScreen extends React.Component {
 
                 <TouchableOpacity
                     activeOpacity={0.5}
-                    onPress={() => {
-                        alert('点击了登录按钮')
-                    }}
+                    onPress={() => navigate('FlexBoxScreen')}
                 >
                     <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>倒计时操作</Text>
+                        <Text style={{fontSize: 16, color: 'white'}}>FlexBox介绍和使用</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -112,8 +111,8 @@ class TestScreen extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
+const styles = StyleSheet.create({ // 样式类，const相当于var
+    container: { // 样式
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -147,6 +146,7 @@ const SimpleApp = StackNavigator({
     HomeScreen: {screen: HomeScreen},
     TestScreen: {screen: TestScreen},
     LoginScreen: {screen: LoginScreen},
+    FlexBoxScreen: {screen: FlexBoxScreen},
 });
 
 export default SimpleApp;

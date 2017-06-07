@@ -12,4 +12,5 @@ import {
 // ES6--引入外部文件
 import HomeScreen from './test/HomeScreen';
 
+// 注册组件
 AppRegistry.registerComponent('ReactNativeModuleProject', () => HomeScreen);
