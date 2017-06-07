@@ -30,13 +30,15 @@ class ImageScreen extends React.Component {
             <View style={styles.container}>
 
                 <Image style={styles.imageStyle}
-                       source={require('../image/icon.png')}/>
+                       source={require('./icon.png')}/>
 
                 {/*<Image style={styles.imageStyle}*/}
                 {/*source={require('image!icon')}/>*/}
 
                 <Image style={styles.imageStyle}
                        source={{uri: imageAddress}}/>
+
+                <Image source={{uri: 'icon'}} style={styles.imageStyle}></Image>
 
                 <Image source={{uri: 'https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg'}}
                        style={styles.bannerImgCoverStyle}></Image>
@@ -50,7 +52,7 @@ class ImageScreen extends React.Component {
                 {/* 因为还没讲到listView,这边就用View代表Cell*/}
                 <View style={styles.cellStyle}>
                     {/* 头像 */}
-                    <Image source={require('../image/icon.png')} style={styles.imgStyle}></Image>
+                    <Image source={require('./icon.png')} style={styles.imgStyle}></Image>
                     {/* 昵称 */}
                     <Text style={styles.nameStyle}>昵称</Text>
                 </View>
@@ -58,7 +60,7 @@ class ImageScreen extends React.Component {
                 <View style={styles.lineStyle}></View>
                 <View style={styles.cellStyle}>
                     {/* 头像 */}
-                    <Image source={require('../image/icon.png')} style={styles.imgStyle}></Image>
+                    <Image source={require('./icon.png')} style={styles.imgStyle}></Image>
                     {/* 昵称 */}
                     <Text style={styles.nameStyle}>昵称</Text>
                 </View>
@@ -66,7 +68,7 @@ class ImageScreen extends React.Component {
                 <View style={styles.lineStyle}></View>
                 <View style={styles.cellStyle}>
                     {/* 头像 */}
-                    <Image source={require('../image/icon.png')} style={styles.imgStyle}></Image>
+                    <Image source={require('./icon.png')} style={styles.imgStyle}></Image>
                     {/* 昵称 */}
                     <Text style={styles.nameStyle}>昵称</Text>
                 </View>

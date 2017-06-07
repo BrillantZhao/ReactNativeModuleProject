@@ -13,9 +13,10 @@ import {
     View
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import LoginScreen from './login/LoginScreen'
-import FlexBoxScreen from './flexbox/FlexBoxScreen'
-import ImageScreen from './image/ImageScreen'
+import LoginScreen from './LoginScreen'
+import FlexBoxScreen from './FlexBoxScreen'
+import ImageScreen from './ImageScreen'
+import TextInputScreen from './TextInputScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -116,6 +117,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('TextInputScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>TextInput使用</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -158,6 +168,7 @@ const SimpleApp = StackNavigator({
     LoginScreen: {screen: LoginScreen},
     FlexBoxScreen: {screen: FlexBoxScreen},
     ImageScreen: {screen: ImageScreen},
+    TextInputScreen: {screen: TextInputScreen},
 });
 
 export default SimpleApp;
