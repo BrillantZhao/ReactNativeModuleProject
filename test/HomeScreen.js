@@ -17,6 +17,7 @@ import LoginScreen from './LoginScreen'
 import FlexBoxScreen from './FlexBoxScreen'
 import ImageScreen from './ImageScreen'
 import TextInputScreen from './TextInputScreen'
+import TouchableScreen from './TouchableScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -126,6 +127,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('TouchableScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>Touchable 介绍与使用</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -169,6 +179,7 @@ const SimpleApp = StackNavigator({
     FlexBoxScreen: {screen: FlexBoxScreen},
     ImageScreen: {screen: ImageScreen},
     TextInputScreen: {screen: TextInputScreen},
+    TouchableScreen: {screen: TouchableScreen},
 });
 
 export default SimpleApp;
