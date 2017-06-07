@@ -8,27 +8,8 @@ import React, {Component} from 'react';
 import {
     AppRegistry
 } from 'react-native';
-import {Navigator} from 'react-native-deprecated-custom-components';
 
 // ES6--引入外部文件
-import TestHomePage from './test/TestHomePage';
+import HomeScreen from './test/HomeScreen';
 
-export default class ReactNativeModuleProject extends Component {
-    render() {
-        return (
-            <Navigator
-                initialRoute={{
-                    name: 'TestHomePage',
-                    component: TestHomePage
-                }}
-
-                renderScene={(route, navigator) => {
-                    let Component = route.component;
-                    return <Component {...route.params} navigator={navigator}/>
-                }}
-            />
-        );
-    }
-}
-
-AppRegistry.registerComponent('ReactNativeModuleProject', () => ReactNativeModuleProject);
+AppRegistry.registerComponent('ReactNativeModuleProject', () => HomeScreen);

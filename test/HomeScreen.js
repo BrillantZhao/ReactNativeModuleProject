@@ -8,15 +8,27 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
+    Button,
     TouchableOpacity,
     View
 } from 'react-native';
+import {StackNavigator} from 'react-navigation';
+import LoginScreen from './login/LoginScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
-export default class TestHomePage extends Component {
+/**
+ * home页面
+ */
+class HomeScreen extends React.Component {
+
+    static navigationOptions = {
+        title: 'Welcome,HomeScreen',//设置标题内容
+    };
+
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={styles.container}>
 
@@ -33,13 +45,54 @@ export default class TestHomePage extends Component {
 
                 <TouchableOpacity
                     activeOpacity={0.5}
-                    onPress={() => {
-                        alert('点击了登录按钮')
-                    }}
+                    // navigate('Chat',{user:'Lucy'})} 意思说：跳转到Chat指的组件，并且带过去的参数key是user,value是Lucy
+                    onPress={() => navigate('TestScreen')}
                 >
-                    {/* 登录按钮 */}
                     <View style={styles.loginButtonStyle}>
                         <Text style={{fontSize: 17, color: 'white'}}>测试页面</Text>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => {
+                        alert('测试项目暂时未集成进来')
+                    }}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 17, color: 'white'}}>项目页面</Text>
+                    </View>
+                </TouchableOpacity>
+
+            </View>
+        );
+    }
+}
+
+/**
+ * 测试页面
+ */
+class TestScreen extends React.Component {
+
+    static navigationOptions = {
+        title: 'TestScreen',
+    };
+
+    render() {
+        const {navigate} = this.props.navigation;
+        return (
+            <View style={styles.container}>
+
+                <Text style={styles.instructions}>
+                    从上一个页面传递过来的参数值：
+                </Text>
+
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('LoginScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>登录页面基础布局</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -49,9 +102,8 @@ export default class TestHomePage extends Component {
                         alert('点击了登录按钮')
                     }}
                 >
-                    {/* 登录按钮 */}
                     <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 17, color: 'white'}}>项目页面</Text>
+                        <Text style={{fontSize: 16, color: 'white'}}>倒计时操作</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -91,3 +143,10 @@ const styles = StyleSheet.create({
     },
 });
 
+const SimpleApp = StackNavigator({
+    HomeScreen: {screen: HomeScreen},
+    TestScreen: {screen: TestScreen},
+    LoginScreen: {screen: LoginScreen},
+});
+
+export default SimpleApp;
