@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
-    Button,
+    ScrollView,
     TouchableOpacity,
     View
 } from 'react-native';
@@ -21,6 +21,7 @@ import TouchableScreen from './TouchableScreen'
 import LifeCycleScreen from './LifeCycleScreen'
 import ScrollViewScreen from './ScrollViewScreen'
 import ListViewScreen from './ListViewScreen'
+import NavigatorScreen from './NavigatorScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -88,85 +89,96 @@ class TestScreen extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
         return (
-            <View style={styles.container}>
+            <ScrollView>
+                <View style={styles.container}>
 
-                <Text style={styles.instructions}>
-                    从上一个页面传递过来的参数值：
-                </Text>
+                    <Text style={styles.instructions}>
+                        从上一个页面传递过来的参数值：
+                    </Text>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('LoginScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>登录页面基础布局</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('LoginScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>登录页面基础布局</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('FlexBoxScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>FlexBox介绍和使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('FlexBoxScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>FlexBox介绍和使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('ImageScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>常用组件Image使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('ImageScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>常用组件Image使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('TextInputScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>TextInput使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('TextInputScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>TextInput使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('TouchableScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>Touchable 介绍与使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('TouchableScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>Touchable 介绍与使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('LifeCycleScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>生命周期</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('LifeCycleScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>生命周期</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('ScrollViewScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>ScrollView介绍和使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('ScrollViewScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>ScrollView介绍和使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.5}
-                    onPress={() => navigate('ListViewScreen')}
-                >
-                    <View style={styles.loginButtonStyle}>
-                        <Text style={{fontSize: 16, color: 'white'}}>ListView使用</Text>
-                    </View>
-                </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('ListViewScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>ListView使用</Text>
+                        </View>
+                    </TouchableOpacity>
 
-            </View>
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => navigate('NavigatorScreen')}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>Navigator使用</Text>
+                        </View>
+                    </TouchableOpacity>
+
+                </View>
+            </ScrollView>
         );
     }
 }
@@ -213,6 +225,7 @@ const SimpleApp = StackNavigator({
     LifeCycleScreen: {screen: LifeCycleScreen},
     ScrollViewScreen: {screen: ScrollViewScreen},
     ListViewScreen: {screen: ListViewScreen},
+    NavigatorScreen: {screen: NavigatorScreen},
 });
 
 export default SimpleApp;

@@ -5,22 +5,17 @@
 import React, {Component} from 'react';
 import {
     View,
-    StyleSheet,
-    Text,
-    TextInput,
-    Image,
-    ScrollView,
-    ListView
+    StyleSheet
 } from 'react-native';
 
 // 导入类库
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
-class ModelScreen extends React.Component {
+class NaviagtorTemp extends React.Component {
 
     static navigationOptions = {
-        title: 'ModelScreen',//设置标题内容
+        title: 'NaviagtorTemp',//设置标题内容
     };
 
     render() {
@@ -50,4 +45,4 @@ var styles = StyleSheet.create({
     }
 });
 
-module.exports = ModelScreen;
+module.exports = NaviagtorTemp;
