@@ -20,6 +20,7 @@ import TextInputScreen from './TextInputScreen'
 import TouchableScreen from './TouchableScreen'
 import LifeCycleScreen from './LifeCycleScreen'
 import ScrollViewScreen from './ScrollViewScreen'
+import ListViewScreen from './ListViewScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -156,6 +157,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('ListViewScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>ListView使用</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -202,6 +212,7 @@ const SimpleApp = StackNavigator({
     TouchableScreen: {screen: TouchableScreen},
     LifeCycleScreen: {screen: LifeCycleScreen},
     ScrollViewScreen: {screen: ScrollViewScreen},
+    ListViewScreen: {screen: ListViewScreen},
 });
 
 export default SimpleApp;

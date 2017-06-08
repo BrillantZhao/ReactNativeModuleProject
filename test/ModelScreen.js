@@ -26,4 +26,22 @@ class ModelScreen extends React.Component {
     }
 }
 
+var ModelScreen = React.createClass({
+
+    render(){
+        return (
+            <View style={styles.container}>
+            </View>
+        );
+    }
+
+});
+
+// 样式
+var styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'white'
+    }
+});
+
 module.exports = ModelScreen;
