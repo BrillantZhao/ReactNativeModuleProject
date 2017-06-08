@@ -4,7 +4,8 @@
 
 import React, {Component} from 'react';
 import {
-    View
+    View,
+    StyleSheet
 } from 'react-native';
 
 // 导入类库
@@ -61,6 +62,10 @@ class FlexDirection extends React.Component {
              * stretch：
              */
             <View>
+                <View style={styles.viewStyle}>
+
+                </View>
+
                 <View style={{flex: 1, flexDirection: 'row'}}>
                     <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
                     <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
@@ -87,9 +92,32 @@ class FlexDirection extends React.Component {
                     <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}/>
                     <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}/>
                 </View>
+
             </View>
         );
     }
 }
+
+var styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
+
+    viewStyle: {
+        // 尺寸
+        width: 300,
+        height: 100,
+        // 背景颜色
+        backgroundColor: 'red',
+        // 边框宽度
+        borderWidth: 1,
+        // 边框颜色
+        borderColor: 'black'
+    }
+
+});
 
 module.exports = FlexDirection;
