@@ -177,6 +177,17 @@ class TestScreen extends React.Component {
                         </View>
                     </TouchableOpacity>
 
+                    <TouchableOpacity
+                        activeOpacity={0.5}
+                        onPress={() => {
+                            alert('other');
+                        }}
+                    >
+                        <View style={styles.loginButtonStyle}>
+                            <Text style={{fontSize: 16, color: 'white'}}>other</Text>
+                        </View>
+                    </TouchableOpacity>
+
                 </View>
             </ScrollView>
         );
@@ -189,6 +200,7 @@ const styles = StyleSheet.create({ // 样式类，const相当于var
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        marginBottom:10,
     },
     welcome: {
         fontSize: 20,
