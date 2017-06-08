@@ -19,6 +19,7 @@ import ImageScreen from './ImageScreen'
 import TextInputScreen from './TextInputScreen'
 import TouchableScreen from './TouchableScreen'
 import LifeCycleScreen from './LifeCycleScreen'
+import ScrollViewScreen from './ScrollViewScreen'
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -146,6 +147,15 @@ class TestScreen extends React.Component {
                     </View>
                 </TouchableOpacity>
 
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => navigate('ScrollViewScreen')}
+                >
+                    <View style={styles.loginButtonStyle}>
+                        <Text style={{fontSize: 16, color: 'white'}}>ScrollView介绍和使用</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -191,6 +201,7 @@ const SimpleApp = StackNavigator({
     TextInputScreen: {screen: TextInputScreen},
     TouchableScreen: {screen: TouchableScreen},
     LifeCycleScreen: {screen: LifeCycleScreen},
+    ScrollViewScreen: {screen: ScrollViewScreen},
 });
 
 export default SimpleApp;

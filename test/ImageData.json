@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "img": "https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg",
+      "title": "图片1"
+    },
+    {
+      "img": "https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg",
+      "title": "图片2"
+    },
+    {
+      "img": "https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg",
+      "title": "图片3"
+    },
+    {
+      "img": "https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg",
+      "title": "图片4"
+    },
+    {
+      "img": "https://img.alicdn.com/tps/TB1OvT9NVXXXXXdaFXXXXXXXXXX-520-280.jpg",
+      "title": "图片5"
+    }
+  ],
+  "other": [
+    {
+      "title": "其他信息"
+    }
+  ]
+}
